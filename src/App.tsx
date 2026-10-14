@@ -4,9 +4,8 @@ import { Experience } from './components/Experience';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { Process } from './components/Process';
 import { SelectedWork } from './components/SelectedWork';
-import { Services } from './components/Services';
+import { Stack } from './components/Stack';
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
       <main>
         <Hero />
         <SelectedWork />
-        <Services />
-        <Process />
+        <Stack />
         <Experience />
         <About />
         <Contact />

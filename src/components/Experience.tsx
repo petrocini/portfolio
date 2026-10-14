@@ -1,35 +1,28 @@
-import { experience, skillGroups } from '../data/portfolio';
+import { experience } from '../data/portfolio';
+import { SectionHeading } from './SectionHeading';
 
 export function Experience() {
   return (
-    <section className="section shell" id="experiencia">
-      <div className="split-heading">
-        <div className="section-heading">
-          <p className="eyebrow">Experiência profissional</p>
-          <h2>
-            Tecnologia é ferramenta. Contexto é o que transforma entrega em resultado.
-          </h2>
-        </div>
-        <div className="skills">
-          {skillGroups.map(([group, skills]) => (
-            <div key={group}>
-              <p>{group}</p>
-              <span>{skills.join(' · ')}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="timeline">
-        {experience.map((item) => (
-          <article key={`${item.company}-${item.role}`}>
-            <p>{item.period}</p>
-            <div>
-              <h3>{item.role}</h3>
+    <section className="section" id="experiencia">
+      <div className="shell narrow">
+        <SectionHeading number="03" title="Onde Já Atuei" />
+        <div className="timeline">
+          {experience.map((item) => (
+            <article key={`${item.company}-${item.role}`}>
+              <div className="experience-top">
+                <h3>{item.role}</h3>
+                <span>{item.period}</span>
+              </div>
               <h4>{item.company}</h4>
               <p>{item.description}</p>
-            </div>
-          </article>
-        ))}
+              <ul className="experience-tags">
+                {item.tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

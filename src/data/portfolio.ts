@@ -1,94 +1,57 @@
-export type ProjectVisibility = 'public' | 'demonstrative' | 'private';
-
 export type Project = {
   title: string;
   description: string;
   tags: string[];
-  visibility: ProjectVisibility;
+  visibility: 'public' | 'private';
   url?: string;
   urlLabel?: string;
-  accent: 'petroleum' | 'sky' | 'sand' | 'clay';
+  preview: 'caiado' | 'pdv' | 'systems';
+  domain: string;
 };
 
 export const projects: Project[] = [
   {
     title: 'Caiado FIFA',
     description:
-      'Landing page para atleta profissional de EA FC, com uma narrativa visual voltada a carreira, performance e oportunidades de parceria.',
+      'Landing page para atleta profissional de EA FC, com uma narrativa visual voltada à carreira, performance e oportunidades de parceria.',
     tags: ['Landing page', 'Design responsivo', 'Tailwind CSS'],
     visibility: 'public',
     url: 'https://www.caiadofifa.com.br',
-    urlLabel: 'Visitar projeto',
-    accent: 'sky',
+    urlLabel: 'Acessar site',
+    preview: 'caiado',
+    domain: 'caiadofifa.com.br',
   },
   {
     title: 'PDV Fácil',
     description:
       'Sistema desktop para operação de balcão: pedidos, catálogo, relatórios, impressão térmica e funcionamento offline-first.',
-    tags: ['Electron', 'React', 'SQLite', 'Prisma'],
+    tags: ['Electron', 'React', 'SQLite'],
     visibility: 'public',
     url: 'https://github.com/petrocini/pdv-facil',
     urlLabel: 'Ver no GitHub',
-    accent: 'petroleum',
-  },
-  {
-    title: 'Clínica médica',
-    description:
-      'Projeto demonstrativo de landing page para uma clínica, pensado para apresentar especialidades e facilitar pedidos de agendamento.',
-    tags: ['Projeto demonstrativo', 'UX para serviços', 'Agendamento'],
-    visibility: 'demonstrative',
-    accent: 'sand',
+    preview: 'pdv',
+    domain: 'github.com/petrocini/pdv-facil',
   },
   {
     title: 'Sistemas sob medida',
     description:
-      'Interfaces e sistemas internos para organizar operações, centralizar informações e tornar rotinas do negócio mais claras.',
-    tags: ['Dashboards', 'Fluxos internos', 'Integrações'],
+      'Interfaces e sistemas internos para organizar operações, centralizar informações e tornar rotinas de negócio mais claras.',
+    tags: ['Dashboards', 'Integrações', 'Fluxos internos'],
     visibility: 'private',
-    accent: 'clay',
+    preview: 'systems',
+    domain: 'projetos privados',
   },
 ];
 
-export const services = [
+export const skillGroups = [
+  { title: 'Frontend', skills: ['React', 'TypeScript', 'HTML/CSS', 'Tailwind CSS'] },
   {
-    title: 'Landing pages com direção',
-    description:
-      'Páginas que apresentam a oferta com clareza, dão contexto ao cliente e conduzem a uma próxima conversa.',
+    title: 'Backend & Dados',
+    skills: ['Laravel', 'Node.js', 'Python', 'MySQL', 'SQLite', 'Redis'],
   },
-  {
-    title: 'Sistemas que organizam o trabalho',
-    description:
-      'Ferramentas para pedidos, processos internos, painéis e operações que não cabem mais em planilhas.',
-  },
-  {
-    title: 'Produtos digitais bem resolvidos',
-    description:
-      'Interfaces rápidas e sustentáveis, conectando experiência de uso, regras de negócio e infraestrutura.',
-  },
+  { title: 'Mobile', skills: ['Android', 'Kotlin', 'Offline-first'] },
+  { title: 'Cloud & DevOps', skills: ['GCP', 'Vercel', 'Docker', 'GitHub'] },
 ];
-
-export const processSteps = [
-  [
-    '01',
-    'Entender o contexto',
-    'Alinhamos objetivo, público e o que precisa mudar no negócio.',
-  ],
-  [
-    '02',
-    'Definir a direção',
-    'Organizo a jornada, o escopo e as decisões que dão clareza ao projeto.',
-  ],
-  [
-    '03',
-    'Construir com critério',
-    'Transformo a direção em uma experiência rápida, responsiva e bem estruturada.',
-  ],
-  [
-    '04',
-    'Publicar e evoluir',
-    'Colocamos no ar com uma base que permite medir, ajustar e crescer.',
-  ],
-] as const;
 
 export const experience = [
   {
@@ -97,6 +60,7 @@ export const experience = [
     period: 'mai. 2026 — atual',
     description:
       'Desenvolvimento full stack com Laravel e Blade, integrações com Google Ad Manager e GCP, automações em Python e extensões JavaScript.',
+    tags: ['Laravel', 'GCP', 'Python'],
   },
   {
     role: 'Desenvolvedor Full Stack',
@@ -104,6 +68,7 @@ export const experience = [
     period: 'nov. 2023 — atual',
     description:
       'Atuação da concepção ao deploy em microsserviços PHP e Node.js, infraestrutura serverless no GCP e processamento assíncrono.',
+    tags: ['Node.js', 'Cloud Run', 'BigQuery'],
   },
   {
     role: 'Desenvolvedor Full Stack',
@@ -111,11 +76,6 @@ export const experience = [
     period: 'set. 2021 — nov. 2023',
     description:
       'Construção de sistemas de produção, estoque e qualidade, incluindo integração RFID e sincronização offline-first para Android.',
+    tags: ['Kotlin', 'RFID', 'SQLite'],
   },
 ];
-
-export const skillGroups = [
-  ['Web', ['React', 'TypeScript', 'Laravel', 'Node.js']],
-  ['Dados', ['MySQL', 'SQLite', 'Redis', 'BigQuery']],
-  ['Infraestrutura', ['GCP', 'Vercel', 'Docker', 'GitHub']],
-] as const;

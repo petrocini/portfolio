@@ -2,8 +2,13 @@ import { describe, expect, it } from 'vitest';
 import { projects } from './portfolio';
 
 describe('portfolio projects', () => {
-  it('contains the four approved portfolio cases', () => {
-    expect(projects).toHaveLength(4);
+  it('shows three real or clearly marked portfolio cases', () => {
+    expect(projects).toHaveLength(3);
+    expect(projects.map((project) => project.title)).toEqual([
+      'Caiado FIFA',
+      'PDV Fácil',
+      'Sistemas sob medida',
+    ]);
   });
 
   it('links only public cases', () => {
@@ -19,10 +24,7 @@ describe('portfolio projects', () => {
     expect(nonPublicProjects.every((project) => !project.url)).toBe(true);
   });
 
-  it('labels the clinic as demonstrative and custom systems as private', () => {
-    expect(
-      projects.find((project) => project.title === 'Clínica médica')?.visibility,
-    ).toBe('demonstrative');
+  it('labels custom systems as private', () => {
     expect(
       projects.find((project) => project.title === 'Sistemas sob medida')?.visibility,
     ).toBe('private');

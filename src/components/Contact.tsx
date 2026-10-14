@@ -2,26 +2,35 @@ import { ContactButton } from './ContactButton';
 
 export function Contact() {
   return (
-    <section className="contact-section" id="contato">
+    <section className="section contact-section" id="contato">
       <div className="shell contact-wrap">
-        <p className="eyebrow">Próximo passo</p>
-        <h2>Vamos tirar seu projeto da lista e colocar no ar.</h2>
+        <p className="contact-kicker">05. Qual é o próximo passo?</p>
+        <h2>Vamos Construir o Seu Projeto</h2>
         <p>
-          Se você tem uma ideia, uma operação pedindo organização ou uma página que
-          precisa trabalhar melhor pelo seu negócio, podemos conversar.
+          Precisa de uma landing page para apresentar seu serviço ou de um sistema web
+          sob medida? Conte o que você tem em mente e podemos definir juntos o melhor
+          caminho.
         </p>
         <ContactButton phoneNumber={import.meta.env.VITE_WHATSAPP_NUMBER} />
         <div className="contact-links">
-          <a href="mailto:lucaspetrocinireis@gmail.com">lucaspetrocinireis@gmail.com</a>
+          <a href="mailto:lucaspetrocinireis@gmail.com" aria-label="E-mail">
+            ✉
+          </a>
           <a
             href="https://www.linkedin.com/in/lucas-petrocini-57843321b"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
           >
-            LinkedIn ↗
+            in
           </a>
-          <a href="https://github.com/petrocini" target="_blank" rel="noreferrer">
-            GitHub ↗
+          <a
+            href="https://github.com/petrocini"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            gh
           </a>
         </div>
       </div>

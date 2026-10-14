@@ -1,34 +1,33 @@
-import { ContactButton } from './ContactButton';
-
 export function Hero() {
   return (
-    <section className="hero shell" id="inicio">
-      <div className="hero-copy">
-        <p className="eyebrow">Desenvolvimento full stack · Brasil</p>
-        <h1>Projetos digitais que tornam o próximo passo mais claro.</h1>
+    <section className="hero" id="inicio">
+      <div className="shell hero-inner">
+        <p className="hero-kicker">Olá, eu sou</p>
+        <h1>Lucas Petrocini.</h1>
+        <p className="hero-role">
+          Desenvolvedor <span>Full Stack</span>.
+        </p>
         <p className="hero-lede">
-          Eu ajudo negócios a transformar uma ideia, serviço ou operação em uma
-          experiência digital útil, rápida e pronta para crescer.
+          Crio landing pages, sites modernos e aplicações web que apresentam negócios
+          com clareza e transformam ideias em experiências digitais úteis.
         </p>
         <div className="hero-actions">
-          <ContactButton phoneNumber={import.meta.env.VITE_WHATSAPP_NUMBER} />
+          <a className="button button-primary" href="#projetos">
+            Ver Projetos <span aria-hidden="true">→</span>
+          </a>
           <a
-            className="text-link"
+            className="button button-outline"
             href="https://github.com/petrocini"
             target="_blank"
             rel="noreferrer"
           >
-            Conhecer meu GitHub <span aria-hidden="true">↗</span>
+            Meu GitHub
           </a>
         </div>
       </div>
-      <aside className="hero-note" aria-label="Como posso ajudar">
-        <span className="note-index">01—</span>
-        <p>
-          Landing pages, sistemas web e produtos digitais feitos com visão de negócio e
-          rigor técnico.
-        </p>
-      </aside>
+      <a className="scroll-cue" href="#projetos" aria-label="Ir para projetos">
+        ↓
+      </a>
     </section>
   );
 }

@@ -14,7 +14,7 @@ export function ContactButton({ phoneNumber, className = '' }: ContactButtonProp
         className={`button button-primary ${className}`}
         href="mailto:lucaspetrocinireis@gmail.com"
       >
-        Falar por e-mail
+        Solicitar Orçamento
       </a>
     );
   }
@@ -26,7 +26,7 @@ export function ContactButton({ phoneNumber, className = '' }: ContactButtonProp
       target="_blank"
       rel="noreferrer"
     >
-      Conversar sobre um projeto <span aria-hidden="true">↗</span>
+      Solicitar Orçamento <span aria-hidden="true">↗</span>
     </a>
   );
 }
