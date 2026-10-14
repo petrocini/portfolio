@@ -13,7 +13,17 @@ npm install
 npm run dev
 ```
 
-Opcionalmente, copie `.env.example` para `.env.local` e defina `VITE_WHATSAPP_NUMBER` para ativar o contato pelo WhatsApp. Sem essa variável, o botão de orçamento abre o e-mail.
+Copie `.env.example` para `.env.local` para usar o contato pelo WhatsApp durante o desenvolvimento. O número inicial é `16 99114-6820`. O build de produção lê `.env.production`. Para trocar o número, altere `VITE_WHATSAPP_NUMBER` e gere um novo build; variáveis `VITE_` são incorporadas aos arquivos publicados e não são segredos. Sem essa variável, o botão de orçamento abre o e-mail.
+
+## Publicar na Cloudflare Workers
+
+O site usa arquivos estáticos no Worker `portfolio`. Após autenticar com `npx wrangler login`, execute:
+
+```bash
+npm run deploy
+```
+
+Esse comando compila o site com o número de `.env.production` e publica os arquivos de `dist`. O Worker atual não tem build automático conectado ao GitHub; um push no repositório, por si só, não publica uma nova versão.
 
 ## Comandos
 
