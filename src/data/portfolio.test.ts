@@ -29,4 +29,10 @@ describe('portfolio projects', () => {
       projects.find((project) => project.title === 'Sistemas sob medida')?.visibility,
     ).toBe('private');
   });
+
+  it('opens the PDV case study inside the portfolio', () => {
+    expect(projects.find((project) => project.title === 'PDV Fácil')?.url).toBe(
+      '/pdv-facil/',
+    );
+  });
 });

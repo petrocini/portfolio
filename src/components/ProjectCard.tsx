@@ -3,17 +3,12 @@ import type { Project } from '../data/portfolio';
 function ProjectPreview({ variant }: { variant: Project['preview'] }) {
   if (variant === 'caiado') {
     return (
-      <div
-        className="preview preview-caiado"
-        aria-label="Prévia ilustrativa do projeto Caiado FIFA"
-      >
-        <span className="preview-mini">CAIADO / EA FC</span>
-        <strong>
-          O jogo
-          <br />é só o começo.
-        </strong>
-        <span className="preview-line" />
-        <span className="preview-orbit" aria-hidden="true" />
+      <div className="preview preview-caiado">
+        <img
+          src="/images/caiado-fifa-site.png"
+          alt="Página inicial do site Caiado FIFA"
+          loading="lazy"
+        />
       </div>
     );
   }
@@ -87,10 +82,11 @@ export function ProjectCard({ project }: { project: Project }) {
           <a
             className="project-link"
             href={project.url}
-            target="_blank"
-            rel="noreferrer"
+            target={project.url.startsWith('http') ? '_blank' : undefined}
+            rel={project.url.startsWith('http') ? 'noopener noreferrer' : undefined}
           >
-            {project.urlLabel} <span aria-hidden="true">↗</span>
+            {project.urlLabel}{' '}
+            <span aria-hidden="true">{project.url.startsWith('http') ? '↗' : '→'}</span>
           </a>
         ) : (
           <span className="project-private">

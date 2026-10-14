@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     title: 'Caiado FIFA',
     description:
-      'Landing page para atleta profissional de EA FC, com uma narrativa visual voltada à carreira, performance e oportunidades de parceria.',
+      'Landing page para apresentar os serviços de EA FC do pro player Vinícius Caiado e facilitar o contato com clientes.',
     tags: ['Landing page', 'Design responsivo', 'Tailwind CSS'],
     visibility: 'public',
     url: 'https://www.caiadofifa.com.br',
@@ -27,10 +27,10 @@ export const projects: Project[] = [
       'Sistema desktop para operação de balcão: pedidos, catálogo, relatórios, impressão térmica e funcionamento offline-first.',
     tags: ['Electron', 'React', 'SQLite'],
     visibility: 'public',
-    url: 'https://github.com/petrocini/pdv-facil',
-    urlLabel: 'Ver no GitHub',
+    url: '/pdv-facil/',
+    urlLabel: 'Conhecer o PDV Fácil',
     preview: 'pdv',
-    domain: 'github.com/petrocini/pdv-facil',
+    domain: 'Aplicativo para Windows',
   },
   {
     title: 'Sistemas sob medida',

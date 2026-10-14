@@ -2,6 +2,8 @@
 
 Portfólio pessoal para apresentar projetos, experiência e serviços de desenvolvimento web. A interface usa a direção visual do HTML de referência fornecido pelo autor, organizada em componentes React e estilos locais.
 
+O cartão do Caiado FIFA usa uma captura do site publicada em `public/images/caiado-fifa-site.png`. O PDV Fácil tem uma página própria em `/pdv-facil/`, com links para o código e para o instalador Windows publicado no GitHub Releases. Ao lançar uma nova versão do PDV, atualize os dados em `src/data/pdv.ts`.
+
 ## Stack
 
 React, TypeScript, Vite e CSS. Não depende de Tailwind via CDN, Font Awesome ou imagens de placeholder.

@@ -335,49 +335,14 @@ body::before {
   position: relative;
 }
 .preview-caiado {
-  background:
-    radial-gradient(circle at 80% 45%, #193667, transparent 39%),
-    linear-gradient(128deg, #060918 25%, #061e46 72%, #180a35);
-  padding: 23px;
-  color: white;
+  background: #0b0d20;
 }
-.preview-mini {
+.preview-caiado img {
   display: block;
-  color: #65caff;
-  font:
-    700 0.6rem 'Fira Code',
-    monospace;
-  letter-spacing: 0.2em;
-  margin-bottom: 20px;
-}
-.preview-caiado strong {
-  position: relative;
-  z-index: 1;
-  display: block;
-  font-size: clamp(1.1rem, 2.1vw, 1.65rem);
-  line-height: 1.05;
-  text-transform: uppercase;
-  letter-spacing: -0.06em;
-}
-.preview-line {
-  display: block;
-  width: 42%;
-  height: 3px;
-  margin-top: 18px;
-  background: #5bc8f7;
-}
-.preview-orbit {
-  width: 45%;
-  aspect-ratio: 1;
-  border: 20px solid rgba(82, 180, 255, 0.3);
-  box-shadow:
-    0 0 40px rgba(48, 123, 241, 0.5),
-    inset 0 0 35px rgba(74, 134, 252, 0.3);
-  border-radius: 50%;
-  position: absolute;
-  right: 8%;
-  top: 5%;
-  transform: rotate(-24deg) skew(13deg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 .preview-pdv {
   display: flex;
