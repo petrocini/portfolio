@@ -22,4 +22,9 @@ describe('createWhatsAppUrl', () => {
   it('returns null when no phone number is configured', () => {
     expect(createWhatsAppUrl(undefined)).toBeNull();
   });
+
+  it('accepts a message specific to a portfolio case', () => {
+    const url = createWhatsAppUrl('16991146820', 'Vi a Clara Nutrição.');
+    expect(new URL(url!).searchParams.get('text')).toBe('Vi a Clara Nutrição.');
+  });
 });

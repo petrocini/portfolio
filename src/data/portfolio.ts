@@ -2,10 +2,10 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  visibility: 'public' | 'private';
+  visibility: 'public' | 'concept';
   url?: string;
   urlLabel?: string;
-  preview: 'caiado' | 'pdv' | 'systems';
+  preview: 'caiado' | 'pdv' | 'clara';
   domain: string;
 };
 
@@ -33,13 +33,15 @@ export const projects: Project[] = [
     domain: 'Aplicativo para Windows',
   },
   {
-    title: 'Sistemas sob medida',
+    title: 'Clara Nutrição',
     description:
-      'Interfaces e sistemas internos para organizar operações, centralizar informações e tornar rotinas de negócio mais claras.',
-    tags: ['Dashboards', 'Integrações', 'Fluxos internos'],
-    visibility: 'private',
-    preview: 'systems',
-    domain: 'projetos privados',
+      'Projeto conceito de landing page para nutricionistas: uma apresentação acolhedora do atendimento, pensada para gerar conversas.',
+    tags: ['Landing page', 'Nutrição', 'Projeto conceito'],
+    visibility: 'concept',
+    url: '/clara-nutricao/',
+    urlLabel: 'Explorar o conceito',
+    preview: 'clara',
+    domain: 'clara-nutricao',
   },
 ];
 

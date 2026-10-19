@@ -7,27 +7,18 @@ describe('portfolio projects', () => {
     expect(projects.map((project) => project.title)).toEqual([
       'Caiado FIFA',
       'PDV Fácil',
-      'Sistemas sob medida',
+      'Clara Nutrição',
     ]);
   });
 
-  it('links only public cases', () => {
-    const publicProjects = projects.filter(
-      (project) => project.visibility === 'public',
-    );
-    const nonPublicProjects = projects.filter(
-      (project) => project.visibility !== 'public',
-    );
-
-    expect(publicProjects).toHaveLength(2);
-    expect(publicProjects.every((project) => Boolean(project.url))).toBe(true);
-    expect(nonPublicProjects.every((project) => !project.url)).toBe(true);
-  });
-
-  it('labels custom systems as private', () => {
+  it('links every case and identifies the fictional one', () => {
+    expect(projects.every((project) => Boolean(project.url))).toBe(true);
     expect(
-      projects.find((project) => project.title === 'Sistemas sob medida')?.visibility,
-    ).toBe('private');
+      projects.find((project) => project.title === 'Clara Nutrição'),
+    ).toMatchObject({
+      visibility: 'concept',
+      url: '/clara-nutricao/',
+    });
   });
 
   it('opens the PDV case study inside the portfolio', () => {

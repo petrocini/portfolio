@@ -9,6 +9,9 @@ export default defineConfig({
       input: {
         home: fileURLToPath(new URL('./index.html', import.meta.url)),
         pdvFacil: fileURLToPath(new URL('./pdv-facil/index.html', import.meta.url)),
+        claraNutricao: fileURLToPath(
+          new URL('./clara-nutricao/index.html', import.meta.url),
+        ),
       },
     },
   },

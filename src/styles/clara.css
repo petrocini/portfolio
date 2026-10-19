@@ -1,0 +1,775 @@
+:root {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #29382f;
+  background: #f4f2e9;
+  font-synthesis: none;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+a {
+  color: inherit;
+}
+button {
+  font: inherit;
+}
+:focus-visible {
+  outline: 3px solid #bc715b;
+  outline-offset: 4px;
+}
+::selection {
+  background: #dce8aa;
+  color: #263b30;
+}
+
+.clara-page {
+  --forest: #263b30;
+  --olive: #738364;
+  --cream: #f4f2e9;
+  --pale: #e8eadb;
+  --clay: #bc715b;
+  overflow: hidden;
+  color: var(--forest);
+  background: var(--cream);
+}
+.clara-page h1,
+.clara-page h2,
+.clara-page h3,
+.clara-thought p {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 500;
+}
+.clara-page section[id] {
+  scroll-margin-top: 94px;
+}
+.clara-container {
+  width: min(1192px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.clara-demo-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  min-height: 33px;
+  padding: 6px 20px;
+  background: #263b30;
+  color: #eef2df;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+.clara-demo-bar strong {
+  font-weight: 700;
+}
+.clara-demo-bar a {
+  color: #e3eabf;
+  text-underline-offset: 3px;
+}
+.clara-demo-bar a:hover {
+  color: white;
+}
+
+.clara-header {
+  position: relative;
+  z-index: 2;
+  background: #f4f2e9;
+  border-bottom: 1px solid rgba(38, 59, 48, 0.12);
+}
+.clara-header-inner {
+  display: flex;
+  min-height: 90px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.clara-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.95rem;
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+  white-space: nowrap;
+}
+.clara-brand > span:last-child {
+  display: flex;
+  align-items: baseline;
+}
+.clara-brand-dot {
+  color: var(--clay);
+}
+.clara-brand small {
+  margin-left: 9px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.clara-brand-mark {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font:
+    1.2rem 'DM Sans',
+    sans-serif;
+  letter-spacing: 0;
+}
+.clara-header nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 34px);
+}
+.clara-header nav a {
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.clara-header nav a:hover {
+  color: #8b5a45;
+}
+.clara-header-cta,
+.clara-outline-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 13px 16px;
+  border: 1px solid var(--forest);
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+.clara-header-cta:hover,
+.clara-outline-link:hover {
+  background: var(--forest);
+  color: white;
+}
+
+.clara-hero {
+  background: #f4f2e9;
+}
+.clara-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.97fr) minmax(0, 1.03fr);
+  min-height: 650px;
+  align-items: stretch;
+}
+.clara-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 62px 45px 65px 0;
+}
+.clara-kicker,
+.clara-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #526d53;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.clara-kicker-line {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--clay);
+}
+.clara-hero h1 {
+  max-width: 670px;
+  margin: 31px 0 23px;
+  font-size: clamp(3.8rem, 6.1vw, 6.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+}
+.clara-hero h1 span {
+  color: var(--clay);
+}
+.clara-hero-copy > p {
+  max-width: 510px;
+  margin: 0;
+  color: #546258;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.clara-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 32px;
+}
+.clara-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 50px;
+  padding: 14px 19px;
+  border: 1px solid var(--forest);
+  border-radius: 3px;
+  background: var(--forest);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+.clara-button:hover {
+  transform: translateY(-2px);
+  background: #395845;
+}
+.clara-text-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.clara-text-link span {
+  margin-left: 6px;
+}
+.clara-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 360px;
+  margin-top: 65px;
+  color: #728071;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+.clara-hero-note > span:first-child {
+  color: var(--clay);
+  font-size: 1.5rem;
+}
+.clara-hero-media {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+.clara-hero-media > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 64% center;
+}
+.clara-media-caption {
+  position: absolute;
+  right: 0;
+  bottom: 33px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 23px;
+  background: #e9ebdb;
+  color: var(--forest);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+.clara-caption-spark {
+  color: #8f9f72;
+  font-size: 2rem;
+  line-height: 1;
+}
+.clara-hero-bottom {
+  display: flex;
+  justify-content: center;
+  gap: clamp(35px, 8vw, 130px);
+  padding: 18px 20px;
+  border-block: 1px solid rgba(38, 59, 48, 0.13);
+  color: #71806d;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.12rem;
+  font-style: italic;
+}
+.clara-hero-bottom span + span::before {
+  content: '✳';
+  margin-right: clamp(35px, 8vw, 130px);
+  color: #b7c0a8;
+  font-style: normal;
+}
+
+.clara-section {
+  padding-block: 120px;
+}
+.clara-section-head {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  column-gap: 9%;
+  align-items: end;
+}
+.clara-section-head .clara-eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 22px;
+}
+.clara-section h2 {
+  margin: 0;
+  font-size: clamp(2.65rem, 4.2vw, 4.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+.clara-section-head h2 {
+  max-width: 680px;
+}
+.clara-section-head h2 em {
+  color: #8b9b78;
+  font-weight: 400;
+}
+.clara-section-head > p,
+.clara-process-intro > p,
+.clara-faq-grid > div:first-child > p {
+  max-width: 450px;
+  margin: 0 0 6px;
+  color: #627065;
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+.clara-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 60px;
+}
+.clara-focus-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 293px;
+  padding: 28px;
+  border: 1px solid #daddce;
+  background: #eeefe5;
+}
+.clara-focus-card > span {
+  color: #758474;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+.clara-focus-icon {
+  margin-top: 23px;
+  color: var(--clay);
+  font-size: 2rem;
+  line-height: 1;
+}
+.clara-focus-card h3 {
+  margin: auto 0 10px;
+  font-size: 1.6rem;
+  letter-spacing: -0.035em;
+}
+.clara-focus-card p {
+  max-width: 295px;
+  margin: 0;
+  color: #667267;
+  font-size: 0.82rem;
+  line-height: 1.68;
+}
+
+.clara-thought {
+  background: #dce2cf;
+}
+.clara-thought-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  min-height: 325px;
+}
+.clara-thought-mark {
+  align-self: flex-start;
+  margin-top: 58px;
+  color: #96a686;
+  font:
+    8rem/1 Fraunces,
+    Georgia,
+    serif;
+}
+.clara-thought p {
+  max-width: 730px;
+  margin: 0;
+  font-size: clamp(2.5rem, 4.7vw, 5rem);
+  line-height: 1.17;
+  letter-spacing: -0.052em;
+}
+.clara-thought-leaf {
+  align-self: flex-end;
+  margin-bottom: 50px;
+  color: #8c9e79;
+  font-size: 3.2rem;
+}
+
+.clara-process-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 13%;
+}
+.clara-process-intro h2 {
+  max-width: 450px;
+  margin: 25px 0 24px;
+}
+.clara-process-intro .clara-outline-link {
+  margin-top: 34px;
+}
+.clara-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.clara-steps li {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 20px;
+  padding: 33px 0;
+  border-top: 1px solid #cbd2c5;
+}
+.clara-steps li:last-child {
+  border-bottom: 1px solid #cbd2c5;
+}
+.clara-steps li > span {
+  padding-top: 9px;
+  color: #a16b58;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+.clara-steps h3 {
+  margin: 0 0 10px;
+  font-size: 1.75rem;
+  letter-spacing: -0.04em;
+}
+.clara-steps p {
+  max-width: 360px;
+  margin: 0;
+  color: #69756a;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.clara-faq {
+  background: #eaece2;
+}
+.clara-faq-grid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 13%;
+}
+.clara-faq-grid h2 {
+  margin: 25px 0 19px;
+}
+.clara-faq-list {
+  border-top: 1px solid #cbd2c5;
+}
+.clara-faq-list details {
+  border-bottom: 1px solid #cbd2c5;
+}
+.clara-faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 0;
+  cursor: pointer;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.22rem;
+  list-style: none;
+}
+.clara-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.clara-faq-list summary span {
+  color: #879974;
+  font:
+    1.5rem/1 'DM Sans',
+    sans-serif;
+}
+.clara-faq-list details[open] summary span {
+  transform: rotate(45deg);
+}
+.clara-faq-list details p {
+  max-width: 550px;
+  margin: -5px 0 24px;
+  color: #617164;
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+
+.clara-contact {
+  padding-block: 100px;
+  background: var(--forest);
+  color: #f4f2e9;
+}
+.clara-contact-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: end;
+  gap: 11%;
+}
+.clara-contact .clara-eyebrow {
+  color: #c3d1a8;
+}
+.clara-contact h2 {
+  max-width: 680px;
+  margin: 23px 0 0;
+  font-size: clamp(2.7rem, 4.6vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.056em;
+}
+.clara-contact-inner > div:last-child {
+  padding-bottom: 7px;
+}
+.clara-contact p {
+  max-width: 425px;
+  margin: 0 0 28px;
+  color: #d1d9cb;
+  font-size: 0.93rem;
+  line-height: 1.8;
+}
+.clara-button-light {
+  background: #e9edda;
+  border-color: #e9edda;
+  color: var(--forest);
+}
+.clara-button-light:hover {
+  background: white;
+}
+.clara-footer {
+  background: #1d2d24;
+  color: #d5ddce;
+}
+.clara-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 110px;
+}
+.clara-footer-inner > span {
+  font:
+    1.7rem Fraunces,
+    Georgia,
+    serif;
+  letter-spacing: -0.065em;
+  white-space: nowrap;
+}
+.clara-footer-inner > span span {
+  color: #d0957e;
+}
+.clara-footer-inner small {
+  font:
+    0.65rem 'DM Sans',
+    sans-serif;
+  letter-spacing: 0;
+}
+.clara-footer p {
+  max-width: 400px;
+  color: #adbbad;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+.clara-footer a {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1050px) {
+  .clara-header nav {
+    display: none;
+  }
+  .clara-hero-grid {
+    min-height: 570px;
+  }
+  .clara-hero h1 {
+    font-size: clamp(3.2rem, 5.8vw, 5rem);
+  }
+  .clara-hero-note {
+    margin-top: 35px;
+  }
+  .clara-section {
+    padding-block: 90px;
+  }
+}
+
+@media (max-width: 760px) {
+  .clara-container {
+    width: min(100% - 36px, 540px);
+  }
+  .clara-demo-bar {
+    justify-content: space-between;
+    font-size: 0.65rem;
+  }
+  .clara-header-inner {
+    min-height: 73px;
+  }
+  .clara-brand {
+    font-size: 1.65rem;
+  }
+  .clara-brand-mark {
+    width: 31px;
+    height: 31px;
+  }
+  .clara-header-cta {
+    display: none;
+  }
+  .clara-hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .clara-hero-copy {
+    padding: 68px 0 54px;
+  }
+  .clara-hero h1 {
+    max-width: 610px;
+    margin-top: 23px;
+    font-size: clamp(3.4rem, 10vw, 5rem);
+  }
+  .clara-hero-media {
+    min-height: 420px;
+    max-height: 620px;
+  }
+  .clara-hero-media > img {
+    aspect-ratio: 1 / 1;
+    object-position: 67% center;
+  }
+  .clara-hero-note {
+    margin-top: 40px;
+  }
+  .clara-hero-bottom {
+    gap: 20px;
+    font-size: 0.95rem;
+  }
+  .clara-hero-bottom span + span::before {
+    margin-right: 20px;
+  }
+  .clara-section-head,
+  .clara-process-grid,
+  .clara-faq-grid,
+  .clara-contact-inner {
+    display: block;
+  }
+  .clara-section-head > p {
+    margin-top: 24px;
+  }
+  .clara-focus-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+    margin-top: 40px;
+  }
+  .clara-focus-card {
+    min-height: 215px;
+  }
+  .clara-focus-icon {
+    margin-top: 10px;
+  }
+  .clara-focus-card h3 {
+    margin-top: auto;
+  }
+  .clara-thought-inner {
+    min-height: 265px;
+    gap: 15px;
+  }
+  .clara-thought-mark {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+  .clara-thought-leaf {
+    display: none;
+  }
+  .clara-process-intro {
+    margin-bottom: 38px;
+  }
+  .clara-faq-grid > div:first-child {
+    margin-bottom: 38px;
+  }
+  .clara-contact-inner > div:last-child {
+    margin-top: 27px;
+  }
+  .clara-footer-inner {
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    padding-block: 28px;
+  }
+  .clara-footer p {
+    order: 3;
+    width: 100%;
+    margin: 4px 0 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .clara-demo-bar {
+    gap: 7px;
+    font-size: 0.59rem;
+  }
+  .clara-demo-bar a {
+    white-space: nowrap;
+  }
+  .clara-hero h1 {
+    font-size: 3.25rem;
+  }
+  .clara-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .clara-hero-media {
+    min-height: 330px;
+  }
+  .clara-media-caption {
+    right: 0;
+    bottom: 16px;
+    padding: 10px 13px;
+    font-size: 0.63rem;
+  }
+  .clara-hero-bottom {
+    gap: 11px;
+    font-size: 0.73rem;
+  }
+  .clara-hero-bottom span + span::before {
+    margin-right: 11px;
+  }
+  .clara-section {
+    padding-block: 73px;
+  }
+  .clara-section h2 {
+    font-size: 2.65rem;
+  }
+  .clara-contact {
+    padding-block: 72px;
+  }
+  .clara-footer-inner > span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  .clara-page *,
+  .clara-page *::before,
+  .clara-page *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

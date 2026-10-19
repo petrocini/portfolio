@@ -37,17 +37,16 @@ function ProjectPreview({ variant }: { variant: Project['preview'] }) {
   }
 
   return (
-    <div
-      className="preview preview-systems"
-      aria-label="Representação de sistemas privados"
-    >
-      <span>system.config</span>
-      <strong>
-        {'{'} soluções sob medida {'}'}
-      </strong>
-      <i />
-      <i />
-      <i />
+    <div className="preview preview-clara">
+      <img
+        src="/images/clara-nutricao-portrait.webp"
+        alt="Prévia do projeto conceito Clara Nutrição"
+        loading="lazy"
+      />
+      <div className="preview-clara-copy" aria-hidden="true">
+        <span>clara. nutrição</span>
+        <strong>Nutrição que cabe na vida que você tem.</strong>
+      </div>
     </div>
   );
 }
@@ -66,7 +65,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <ProjectPreview variant={project.preview} />
       <div className="project-body">
         <span className="project-status">
-          {project.visibility === 'public' ? 'Projeto público' : 'Projeto privado'}
+          {project.visibility === 'concept' ? 'Projeto conceito' : 'Projeto público'}
         </span>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
@@ -78,7 +77,7 @@ export function ProjectCard({ project }: { project: Project }) {
             <li key={tag}>{tag}</li>
           ))}
         </ul>
-        {project.url ? (
+        {project.url && (
           <a
             className="project-link"
             href={project.url}
@@ -88,10 +87,6 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.urlLabel}{' '}
             <span aria-hidden="true">{project.url.startsWith('http') ? '↗' : '→'}</span>
           </a>
-        ) : (
-          <span className="project-private">
-            Acesso restrito por confidencialidade.
-          </span>
         )}
       </div>
     </article>

@@ -408,34 +408,48 @@ body::before {
 .pdv-main p:last-child {
   width: 65%;
 }
-.preview-systems {
-  background: radial-gradient(circle at 50% 130%, #382053, transparent 60%), #0b1020;
-  padding: 24px;
-  font-family: 'Fira Code', monospace;
+.preview-clara {
+  background: #dce2cf;
 }
-.preview-systems span {
+.preview-clara img {
   display: block;
-  color: #9178ba;
-  font-size: 0.65rem;
-  margin-bottom: 27px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 63% center;
 }
-.preview-systems strong {
-  display: block;
-  color: #79d1ef;
-  font-size: clamp(0.75rem, 1.2vw, 1rem);
-  font-weight: 500;
-  margin-bottom: 24px;
+.preview-clara::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(36, 59, 47, 0.92),
+    rgba(36, 59, 47, 0.25) 70%
+  );
 }
-.preview-systems i {
-  display: block;
-  width: 70%;
-  height: 5px;
-  background: #293b57;
-  border-radius: 5px;
-  margin: 9px 0;
+.preview-clara-copy {
+  position: absolute;
+  z-index: 1;
+  inset: 16px auto 16px 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55%;
+  color: #f5f3e9;
 }
-.preview-systems i:last-child {
-  width: 45%;
+.preview-clara-copy span {
+  font:
+    600 0.8rem Fraunces,
+    Georgia,
+    serif;
+}
+.preview-clara-copy strong {
+  font:
+    500 clamp(1rem, 1.6vw, 1.4rem)/1.16 Fraunces,
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
 }
 .project-body {
   display: flex;
