@@ -13,12 +13,30 @@ describe('portfolio page', () => {
       'Lucas Petrocini',
     );
     expect(screen.getByRole('heading', { name: /soluções & projetos/i })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: /site, seo e google/i })).toBeTruthy();
     expect(screen.getByRole('heading', { name: /stack e ferramentas/i })).toBeTruthy();
     expect(screen.getByRole('heading', { name: /onde já atuei/i })).toBeTruthy();
     expect(screen.getByRole('heading', { name: /sobre mim/i })).toBeTruthy();
-    const quoteLink = screen.getByRole('link', { name: /solicitar orçamento/i });
-    expect(quoteLink.getAttribute('href')).toContain(
-      'https://wa.me/5516991146820?text=',
+    expect(
+      [...document.querySelectorAll('main section[id]')].map((section) => section.id),
+    ).toEqual([
+      'inicio',
+      'projetos',
+      'servicos',
+      'sobre',
+      'experiencia',
+      'stack',
+      'contato',
+    ]);
+    expect(screen.getAllByRole('link', { name: /solicitar orçamento/i })).toHaveLength(
+      2,
     );
+    for (const quoteLink of screen.getAllByRole('link', {
+      name: /solicitar orçamento/i,
+    })) {
+      expect(quoteLink.getAttribute('href')).toContain(
+        'https://wa.me/5516991146820?text=',
+      );
+    }
   });
 });

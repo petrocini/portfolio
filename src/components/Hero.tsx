@@ -1,27 +1,22 @@
+import { ContactButton } from './ContactButton';
+
 export function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="shell hero-inner">
-        <p className="hero-kicker">Olá, eu sou</p>
+        <p className="hero-kicker">Desenvolvedor full stack</p>
         <h1>Lucas Petrocini.</h1>
         <p className="hero-role">
-          Desenvolvedor <span>Full Stack</span>.
+          Landing pages para <span>seu negócio</span>.
         </p>
         <p className="hero-lede">
-          Crio landing pages, sites modernos e aplicações web que apresentam negócios
-          com clareza e transformam ideias em experiências digitais úteis.
+          Crio sites que apresentam seu serviço com clareza, facilitam o contato e já
+          nascem com uma base para serem encontrados no Google.
         </p>
         <div className="hero-actions">
-          <a className="button button-primary" href="#projetos">
-            Ver Projetos <span aria-hidden="true">→</span>
-          </a>
-          <a
-            className="button button-outline"
-            href="https://github.com/petrocini"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Meu GitHub
+          <ContactButton phoneNumber={import.meta.env.VITE_WHATSAPP_NUMBER} />
+          <a className="button button-outline" href="#projetos">
+            Ver projetos <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>

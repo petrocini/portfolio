@@ -4,7 +4,7 @@ export function About() {
   return (
     <section className="section about-section" id="sobre">
       <div className="shell">
-        <SectionHeading number="04" title="Sobre Mim" />
+        <SectionHeading number="03" title="Sobre Mim" />
         <div className="about-grid">
           <div className="about-copy">
             <p>

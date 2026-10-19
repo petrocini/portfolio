@@ -1,8 +1,7 @@
 import { useState } from 'react';
 const navItems = [
   ['Projetos', '#projetos'],
-  ['Stack', '#stack'],
-  ['Experiência', '#experiencia'],
+  ['Serviços', '#servicos'],
   ['Sobre', '#sobre'],
   ['Contato', '#contato'],
 ] as const;

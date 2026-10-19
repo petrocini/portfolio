@@ -5,7 +5,7 @@ export function Stack() {
   return (
     <section className="section" id="stack">
       <div className="shell">
-        <SectionHeading number="02" title="Stack e Ferramentas" />
+        <SectionHeading number="05" title="Stack e Ferramentas" />
         <div className="stack-intro glass-card">
           <div>
             <span>Como trabalho</span>
