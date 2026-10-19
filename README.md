@@ -2,9 +2,11 @@
 
 Portfólio pessoal para apresentar projetos, experiência e serviços de desenvolvimento web. A interface usa a direção visual do HTML de referência fornecido pelo autor, organizada em componentes React e estilos locais.
 
-O cartão do Caiado FIFA usa uma captura do site publicada em `public/images/caiado-fifa-site.png`. O PDV Fácil tem uma página própria em `/pdv-facil/`, com links para o código e para o instalador Windows publicado no GitHub Releases. Ao lançar uma nova versão do PDV, atualize os dados em `src/data/pdv.ts`.
+O cartão do Caiado FIFA usa uma captura otimizada em `public/images/caiado-fifa-card.webp` (original em `public/images/caiado-fifa-site.png`). O PDV Fácil tem uma página própria em `/pdv-facil/`, com links para o código e para o instalador Windows publicado no GitHub Releases. Ao lançar uma nova versão do PDV, atualize os dados em `src/data/pdv.ts`.
 
 Clara Nutrição é um projeto conceito de landing page em `/clara-nutricao/`. Marca, profissional e atendimento são fictícios, e a página informa isso ao visitante. A foto foi gerada para esta demonstração e está em `public/images/clara-nutricao-portrait.webp`. O contato comercial direciona para o WhatsApp configurado no portfólio; sem número configurado, usa e-mail. A página usa `noindex` para não apresentar a marca fictícia como um serviço real nos mecanismos de busca.
+
+As fontes são servidas localmente em `public/fonts/`; as licenças OFL estão em `licenses/fonts/`. `robots.txt` e o sitemap apontam para a publicação principal na Cloudflare.
 
 ## Stack
 

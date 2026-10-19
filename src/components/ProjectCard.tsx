@@ -5,9 +5,11 @@ function ProjectPreview({ variant }: { variant: Project['preview'] }) {
     return (
       <div className="preview preview-caiado">
         <img
-          src="/images/caiado-fifa-site.png"
+          src="/images/caiado-fifa-card.webp"
           alt="Página inicial do site Caiado FIFA"
           loading="lazy"
+          width="800"
+          height="450"
         />
       </div>
     );
@@ -39,9 +41,11 @@ function ProjectPreview({ variant }: { variant: Project['preview'] }) {
   return (
     <div className="preview preview-clara">
       <img
-        src="/images/clara-nutricao-portrait.webp"
+        src="/images/clara-nutricao-800.webp"
         alt="Prévia do projeto conceito Clara Nutrição"
         loading="lazy"
+        width="800"
+        height="500"
       />
       <div className="preview-clara-copy" aria-hidden="true">
         <span>clara. nutrição</span>

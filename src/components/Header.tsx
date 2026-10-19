@@ -14,7 +14,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="shell nav-wrap">
-        <a className="brand" href="#inicio" aria-label="Ir para o início">
+        <a className="brand" href="#inicio" aria-label="Petrocini, ir para o início">
           &lt;Petrocini <span>/&gt;</span>
         </a>
         <button

@@ -20,17 +20,17 @@ export function Contact() {
             href="https://www.linkedin.com/in/lucas-petrocini-57843321b"
             target="_blank"
             rel="noreferrer"
-            aria-label="LinkedIn"
+            aria-label="in LinkedIn"
           >
-            in
+            <span aria-hidden="true">in</span>
           </a>
           <a
             href="https://github.com/petrocini"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub"
+            aria-label="gh GitHub"
           >
-            gh
+            <span aria-hidden="true">gh</span>
           </a>
         </div>
       </div>

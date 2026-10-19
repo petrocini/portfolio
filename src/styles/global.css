@@ -1,3 +1,19 @@
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/fonts/inter-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/fira-code-latin.woff2') format('woff2');
+}
+
 :root {
   font-family: Inter, Arial, sans-serif;
   color: #e5e7eb;
@@ -96,6 +112,9 @@ body::before {
   gap: 24px;
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: white;
   font:
     700 1.32rem/1 'Fira Code',
@@ -116,6 +135,9 @@ body::before {
   align-items: center;
 }
 .main-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
   text-decoration: none;
   color: #c5c8d0;
   font-size: 0.85rem;
@@ -132,6 +154,8 @@ body::before {
   border: 0;
   font-size: 1.5rem;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .hero {
@@ -210,11 +234,11 @@ body::before {
 }
 .button-primary {
   color: white;
-  background: var(--blue);
+  background: #2563eb;
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
 }
 .button-primary:hover {
-  background: #2563eb;
+  background: #1d4ed8;
 }
 .button-outline {
   border-color: #515660;
@@ -225,6 +249,11 @@ body::before {
   background: rgba(59, 130, 246, 0.1);
 }
 .scroll-cue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   position: absolute;
   bottom: 26px;
   color: #858995;
@@ -498,6 +527,9 @@ body::before {
 }
 .project-link,
 .project-private {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   margin-top: 22px;
   color: #7cb6ff;
   font-size: 0.79rem;
@@ -581,11 +613,11 @@ body::before {
 .code-content p > span {
   display: inline-block;
   width: 34px;
-  color: #515564;
+  color: #9298a6;
   user-select: none;
 }
 .code-content em {
-  color: #717888;
+  color: #9298a6;
 }
 .code-content b {
   color: #b690fb;

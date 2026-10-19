@@ -114,7 +114,7 @@ export function PdvLanding() {
           <a
             className="pdv-brand"
             href="/#projetos"
-            aria-label="Voltar ao portfólio de Lucas Petrocini"
+            aria-label="PDV Fácil, voltar ao portfólio de Lucas Petrocini"
           >
             <span className="pdv-brand-icon">▦</span> PDV Fácil
           </a>

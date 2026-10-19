@@ -137,6 +137,8 @@ export function ClaraLanding() {
             <div className="clara-hero-media">
               <img
                 src="/images/clara-nutricao-portrait.webp"
+                srcSet="/images/clara-nutricao-800.webp 800w, /images/clara-nutricao-portrait.webp 1586w"
+                sizes="(max-width: 760px) calc(100vw - 36px), 50vw"
                 alt="Retrato ilustrativo de uma profissional em um ambiente de atendimento"
                 width="1584"
                 height="1024"

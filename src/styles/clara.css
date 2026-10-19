@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/dm-sans-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Fraunces;
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('/fonts/fraunces-latin.woff2') format('woff2');
+}
+
 :root {
   font-family: 'DM Sans', Arial, sans-serif;
   color: #29382f;
@@ -69,6 +85,9 @@ button {
   font-weight: 700;
 }
 .clara-demo-bar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
   color: #e3eabf;
   text-underline-offset: 3px;
 }
@@ -133,6 +152,9 @@ button {
   gap: clamp(18px, 2.4vw, 34px);
 }
 .clara-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 0.84rem;
   font-weight: 600;
   text-decoration: none;
@@ -243,6 +265,9 @@ button {
   background: #395845;
 }
 .clara-text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 0.82rem;
   font-weight: 700;
   text-decoration: underline;
@@ -257,7 +282,7 @@ button {
   gap: 12px;
   max-width: 360px;
   margin-top: 65px;
-  color: #728071;
+  color: #536653;
   font-size: 0.72rem;
   line-height: 1.5;
 }
@@ -301,7 +326,7 @@ button {
   gap: clamp(35px, 8vw, 130px);
   padding: 18px 20px;
   border-block: 1px solid rgba(38, 59, 48, 0.13);
-  color: #71806d;
+  color: #526650;
   font-family: Fraunces, Georgia, serif;
   font-size: 1.12rem;
   font-style: italic;
@@ -336,7 +361,7 @@ button {
   max-width: 680px;
 }
 .clara-section-head h2 em {
-  color: #8b9b78;
+  color: #6a7d58;
   font-weight: 400;
 }
 .clara-section-head > p,
@@ -344,7 +369,7 @@ button {
 .clara-faq-grid > div:first-child > p {
   max-width: 450px;
   margin: 0 0 6px;
-  color: #627065;
+  color: #566657;
   font-size: 0.97rem;
   line-height: 1.8;
 }
@@ -363,7 +388,7 @@ button {
   background: #eeefe5;
 }
 .clara-focus-card > span {
-  color: #758474;
+  color: #526853;
   font-size: 0.76rem;
   font-weight: 700;
 }
@@ -381,7 +406,7 @@ button {
 .clara-focus-card p {
   max-width: 295px;
   margin: 0;
-  color: #667267;
+  color: #5b695d;
   font-size: 0.82rem;
   line-height: 1.68;
 }
@@ -448,7 +473,7 @@ button {
 }
 .clara-steps li > span {
   padding-top: 9px;
-  color: #a16b58;
+  color: #895540;
   font-size: 0.76rem;
   font-weight: 700;
 }
@@ -460,7 +485,7 @@ button {
 .clara-steps p {
   max-width: 360px;
   margin: 0;
-  color: #69756a;
+  color: #5e6b60;
   font-size: 0.85rem;
   line-height: 1.7;
 }
@@ -587,6 +612,9 @@ button {
   line-height: 1.5;
 }
 .clara-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 0.74rem;
   font-weight: 700;
   text-underline-offset: 4px;
@@ -594,8 +622,16 @@ button {
 }
 
 @media (max-width: 1050px) {
+  .clara-header-inner {
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 0;
+    padding-block: 8px;
+  }
   .clara-header nav {
-    display: none;
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
   }
   .clara-hero-grid {
     min-height: 570px;
@@ -631,6 +667,12 @@ button {
   }
   .clara-header-cta {
     display: none;
+  }
+  .clara-header nav {
+    gap: 8px;
+  }
+  .clara-header nav a {
+    font-size: 0.76rem;
   }
   .clara-hero-grid {
     display: flex;

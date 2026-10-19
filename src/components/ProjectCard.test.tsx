@@ -9,7 +9,7 @@ describe('ProjectCard', () => {
 
     expect(
       screen.getByRole('img', { name: /site caiado fifa/i }).getAttribute('src'),
-    ).toBe('/images/caiado-fifa-site.png');
+    ).toBe('/images/caiado-fifa-card.webp');
     expect(
       screen.getByRole('link', { name: /acessar site/i }).getAttribute('href'),
     ).toBe('https://www.caiadofifa.com.br');
